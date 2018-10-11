@@ -48,4 +48,4 @@ def main(offset):
 if __name__ == '__main__':
     # 多进程并行实现喵爪！
     pool = Pool()
-    pool.map(main,[i*10 for i in range(10)])
+    pool.map(main, [i * 10 for i in range(10)])
