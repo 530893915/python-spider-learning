@@ -15,8 +15,6 @@ from config import *
 
 
 
-
-
 client = pymongo.MongoClient(MONGO_URL,connect=False)
 db = client[MONGO_DB]
 
