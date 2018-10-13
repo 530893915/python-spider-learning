@@ -29,7 +29,9 @@ def search():
         input.send_keys(KEYWORD)
         time.sleep(1)
         submit.click()
-        total = wait.until(EC.presence_of_elements_located((By.CSS_SELECTOR,'#mainsrp-pager > div > div > div > div.total')))
+        total = wait.until(
+            EC.presence_of_element_located((By.CSS_SELECTOR,'#mainsrp-pager > div > div > div > div.total'))
+        )
         get_products()
         return total.text
     except TimeoutException:
