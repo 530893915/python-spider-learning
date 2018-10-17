@@ -7,6 +7,11 @@ class ZhihuSpider(Spider):
     name = 'zhihu'
     allowed_domains = ['www.zhihu.com']
     start_urls = ['http://www.zhihu.com/']
+
+    # followers_query和user_query都是后面的include
+    # follows意思是他关注的人的列表
+    # followers意思是关注他的列表
+    # limit和offset也是变量，limit是固定值，而offset则根据页面的变化而变化(页码)
     start_user = 'excited-vczh'
     user_url = 'https://www.zhihu.com/api/v4/members/{user}?include={include}'
     user_query = 'allow_message,is_followed,is_following,is_org,is_blocking,employments,answer_count,follower_count,articles_count,gender,badge[?(type=best_answerer)].topics'
